@@ -75,9 +75,18 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
 
-              SizedBox(width: 25),
+              SizedBox(height: 25),
 
               //How do you feel?
+
+              Text(
+                'How do you feel?',
+                style: TextStyle(
+                  color: Colors.orange,
+                  fontSize: 22,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
 
             ],
           ),
