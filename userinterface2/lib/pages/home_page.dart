@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:userinterface2/utilities/best_selling.dart';
 import 'package:userinterface2/utilities/emoticon_face.dart';
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -19,11 +20,11 @@ class _HomePageState extends State<HomePage> {
           label: ''
           ),
           BottomNavigationBarItem(
-              icon: Icon(Icons.home),
+              icon: Icon(Icons.message),
               label: ''
           ),
           BottomNavigationBarItem(
-              icon: Icon(Icons.home),
+              icon: Icon(Icons.person),
               label: ''
           ),
         ],
@@ -208,23 +209,57 @@ class _HomePageState extends State<HomePage> {
             Expanded(
               child: Container(
                 padding: EdgeInsets.all(25),
-                color: Colors.grey.shade100,
+                color: Colors.grey.shade200,
                 child: Center(
                   child: Column(
                     children: [
+                      //best selling heading
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Text(
                               'Best Selling',
                             style: TextStyle(
-                              fontSize: 22,
+                              color: Colors.orange,
+                              fontSize: 18,
                               fontWeight: FontWeight.bold,
                             ),
                           ),
                           Icon(Icons.more_horiz),
                         ],
-                      )
+                      ),
+                      SizedBox(height: 20),
+
+                      //list view of best selling
+
+                      Expanded(
+                          child: ListView(
+                            children: [
+                              BestSelling(
+                                icon: Icons.favorite,
+                                bestsellingName: 'Orange fresh Juice',
+                                numberOfBestSelling: 'For you make fresh Juice Its a pure juice for everyone',
+                                price: '40.99 PKR',
+                                color: Colors.orange,
+                              ),
+                              BestSelling(
+                                icon: Icons.favorite,
+                                bestsellingName: 'Juicy Grapes',
+                                numberOfBestSelling: 'Grapes are sweet and it give us good taste',
+                                price: '80.99 PKR',
+                                color: Colors.green.shade300,
+                              ),
+                              BestSelling(
+                                icon: Icons.star,
+                                bestsellingName: 'Fresh Carrot',
+                                numberOfBestSelling: 'Carrot is useful for healthy body',
+                                price: '25.99 PKR',
+                                color: Colors.red,
+                              ),
+                            ],
+                          ) )
+
+
                     ],
                   ),
                 ),
