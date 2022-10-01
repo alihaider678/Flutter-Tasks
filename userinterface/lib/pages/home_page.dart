@@ -41,49 +41,60 @@ class _HomePageState extends State<HomePage> {
           label: '',
         ),
       ]),
-      body: Column(
-        children: [
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 25.0),
-            child: Text("Find the best coffee for you",
-                style: GoogleFonts.bebasNeue(
-                  fontSize: 50,
-                )),
+      body: Column(children: [
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 25.0),
+          child: Text("Hello Ali,",
+              style: TextStyle(
+                fontSize: 30,
+                fontWeight: FontWeight.bold,
+                color: Colors.orange,
+              )),
+        ),
+        Text(
+          'Excited to choose something new today?',
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
+            fontSize: 15,
           ),
-          SizedBox(height: 25),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 25.0),
-            child: TextField(
-              decoration: InputDecoration(
-                  prefixIcon: Icon(Icons.search),
-                  hintText: "Find your coffe...",
-                  focusedBorder: OutlineInputBorder(
-                    borderSide: BorderSide(color: Colors.grey.shade600),
-                  ),
-                  enabledBorder: OutlineInputBorder(
-                      borderSide: BorderSide(color: Colors.grey.shade600))),
-            ),
+        ),
+        SizedBox(height: 25),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 25.0),
+          child: TextField(
+            decoration: InputDecoration(
+                prefixIcon: Icon(Icons.search),
+                hintText: "Find your coffe...",
+                focusedBorder: OutlineInputBorder(
+                  borderSide: BorderSide(color: Colors.grey.shade600),
+                ),
+                enabledBorder: OutlineInputBorder(
+                    borderSide: BorderSide(color: Colors.grey.shade600))),
           ),
-          SizedBox(height: 25),
-          Container(
-            height: 50,
-            child: ListView(
-              scrollDirection: Axis.horizontal,
-              children: [
-                CoffeeType(coffeeType: 'Cappucino',
+        ),
+        SizedBox(height: 25),
+        Container(
+          height: 50,
+          child: ListView(
+            scrollDirection: Axis.horizontal,
+            children: [
+              CoffeeType(
+                coffeeType: 'Cappucino',
                 isSelected: true,
-                ),
-                CoffeeType(coffeeType: 'Latte',
+              ),
+              CoffeeType(
+                coffeeType: 'Latte',
                 isSelected: false,
-                ),
-                CoffeeType(coffeeType: 'Black',
+              ),
+              CoffeeType(
+                coffeeType: 'Black',
                 isSelected: false,
-                ),
-              ],
-            ),
+              ),
+            ],
           ),
-          Expanded(
-              child: ListView(
+        ),
+        Expanded(
+          child: ListView(
             scrollDirection: Axis.horizontal,
             children: [
               CoffeeTile(
@@ -103,8 +114,8 @@ class _HomePageState extends State<HomePage> {
               ),
             ],
           ),
-          ),
-        ]),
+        ),
+      ]),
     );
   }
 }
