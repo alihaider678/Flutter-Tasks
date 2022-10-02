@@ -86,16 +86,16 @@ class _HomePageState extends State<HomePage> {
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(12),
                     ),
-                    padding: EdgeInsets.all(12),
+                    padding: EdgeInsets.all(17),
                     child: Row(
                       children: [
-                        Icon(Icons.search,
-                          color: Colors.orange,),
                         SizedBox(width: 5),
-                        Text('search',
+                        Text('Enjoy the special offer\nup to 30%',
                           style: TextStyle(
                             color: Colors.orange,
-                          ),)
+                            fontSize: 18,
+                          ),
+                        ),
                       ],
                     ),
                   ),
