@@ -92,7 +92,7 @@ class _DiceGameState extends State<DiceGame> {
                           style: TextStyle(
                             fontSize: 20.0,
                             fontWeight: FontWeight.bold,
-                            color: Colors.white,
+                            color: Colors.red,
                             fontFamily: 'Orbitron',
                             letterSpacing: 2.0,
                           ),
@@ -109,7 +109,7 @@ class _DiceGameState extends State<DiceGame> {
                           style: TextStyle(
                             fontSize: 20.0,
                             fontWeight: FontWeight.bold,
-                            color: Colors.white,
+                            color: Colors.yellow,
                             fontFamily: 'Orbitron',
                             letterSpacing: 2.0,
                           ),
@@ -229,7 +229,7 @@ class _DiceGameState extends State<DiceGame> {
                           style: TextStyle(
                             fontSize: 20.0,
                             fontWeight: FontWeight.bold,
-                            color: Colors.white,
+                            color: Colors.blue,
                             fontFamily: 'Orbitron',
                             letterSpacing: 2.0,
                           ),
@@ -246,7 +246,7 @@ class _DiceGameState extends State<DiceGame> {
                           style: TextStyle(
                             fontSize: 20.0,
                             fontWeight: FontWeight.bold,
-                            color: Colors.white,
+                            color: Colors.green,
                             fontFamily: 'Orbitron',
                             letterSpacing: 2.0,
                           ),
