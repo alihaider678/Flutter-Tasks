@@ -136,7 +136,7 @@ class _DiceGameState extends State<DiceGame> {
                       }
                           : null,
                       child: Image.asset(
-                        'assets/images/Dice $leftDiceNumber.png',
+                        'images/Dice $leftDiceNumber.png',
                         //color: Colors.white,
                       ),
                     ),
@@ -173,7 +173,7 @@ class _DiceGameState extends State<DiceGame> {
                       }
                           : null,
                       child: Image.asset(
-                        'assets/images/Dice $rightDiceNumber.png',
+                        'images/Dice $rightDiceNumber.png',
                         //color: Colors.white,
                       ),
                     ),
@@ -273,7 +273,7 @@ class _DiceGameState extends State<DiceGame> {
                       }
                           : null,
                       child: Image.asset(
-                        'assets/images/Dice $bottomleftDiceNumber.png',
+                        'images/Dice $bottomleftDiceNumber.png',
                         //color: Colors.white,
                       ),
                     ),
@@ -293,7 +293,7 @@ class _DiceGameState extends State<DiceGame> {
                       }
                           : null,
                       child: Image.asset(
-                        'assets/images/Dice $bottomrightDiceNumber.png',
+                        'images/Dice $bottomrightDiceNumber.png',
                         //color: Colors.white,
                       ),
                     ),
