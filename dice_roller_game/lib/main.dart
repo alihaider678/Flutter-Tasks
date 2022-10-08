@@ -32,11 +32,10 @@ class _DiceGameState extends State<DiceGame> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        backgroundColor: Colors.indigo[500],
+        //backgroundColor: Colors.blue.shade900,
         appBar: AppBar(
-          title: Text('Dice Game'),
-          // backgroundColor: Colors.teal[200],
-          backgroundColor: Colors.indigoAccent,
+          title: Text('Dice Roller Game'),
+          backgroundColor: Colors.blue.shade900,
           centerTitle: true,
         ),
         body: SingleChildScrollView(
@@ -47,15 +46,14 @@ class _DiceGameState extends State<DiceGame> {
                 children: [
                   Expanded(
                     child: Container(
-                      padding: EdgeInsets.all(5.0),
+                      padding: EdgeInsets.all(15.0),
                       child: Center(
                         child: Text(
                           '$playerOneScore',
                           style: TextStyle(
                             fontSize: 25.0,
                             fontWeight: FontWeight.bold,
-                            color: Colors.white,
-                            fontFamily: 'Orbitron',
+                            color: Colors.red,
                             letterSpacing: 2.0,
                           ),
                         ),
@@ -64,15 +62,14 @@ class _DiceGameState extends State<DiceGame> {
                   ),
                   Expanded(
                     child: Container(
-                      padding: EdgeInsets.all(5.0),
+                      padding: EdgeInsets.all(15.0),
                       child: Center(
                         child: Text(
                           '$playerTwoScore',
                           style: TextStyle(
                             fontSize: 25.0,
                             fontWeight: FontWeight.bold,
-                            color: Colors.white,
-                            fontFamily: 'Orbitron',
+                            color: Colors.yellow,
                             letterSpacing: 2.0,
                           ),
                         ),
@@ -85,15 +82,14 @@ class _DiceGameState extends State<DiceGame> {
                 children: [
                   Expanded(
                     child: Container(
-                      padding: EdgeInsets.all(30.0),
+                      padding: EdgeInsets.all(15.0),
                       child: Center(
                         child: Text(
-                          'Player 1',
+                          'Abdullah',
                           style: TextStyle(
                             fontSize: 20.0,
                             fontWeight: FontWeight.bold,
                             color: Colors.red,
-                            fontFamily: 'Orbitron',
                             letterSpacing: 2.0,
                           ),
                         ),
@@ -102,15 +98,14 @@ class _DiceGameState extends State<DiceGame> {
                   ),
                   Expanded(
                     child: Container(
-                      padding: EdgeInsets.all(30.0),
+                      padding: EdgeInsets.all(15.0),
                       child: Center(
                         child: Text(
-                          'Player 2',
+                          'Ali',
                           style: TextStyle(
                             fontSize: 20.0,
                             fontWeight: FontWeight.bold,
                             color: Colors.yellow,
-                            fontFamily: 'Orbitron',
                             letterSpacing: 2.0,
                           ),
                         ),
@@ -137,7 +132,8 @@ class _DiceGameState extends State<DiceGame> {
                           : null,
                       child: Image.asset(
                         'assets/images/Dice $leftDiceNumber.png',
-                        //color: Colors.white,
+                        width: 120,
+                        height: 120,
                       ),
                     ),
                   ),
@@ -161,11 +157,11 @@ class _DiceGameState extends State<DiceGame> {
                             p3IsEnabled = false;
                             p4IsEnabled = false;
                             if (playerOneScore > playerTwoScore) {
-                              turnsLeft = 'Player 1 won, tap to replay!';
+                              turnsLeft = ' won, tap to play again!';
                             } else if (playerTwoScore == playerOneScore) {
                               turnsLeft = 'Drawn, tap to replay!';
                             } else {
-                              turnsLeft = 'Player 2 won, tap to restart!';
+                              turnsLeft = 'Ali won, tap to play again!';
                             }
                           }
                         });
@@ -174,6 +170,8 @@ class _DiceGameState extends State<DiceGame> {
                           : null,
                       child: Image.asset(
                         'assets/images/Dice $rightDiceNumber.png',
+                        width: 120,
+                        height: 120,
                         //color: Colors.white,
                       ),
                     ),
@@ -191,8 +189,7 @@ class _DiceGameState extends State<DiceGame> {
                           style: TextStyle(
                             fontSize: 25.0,
                             fontWeight: FontWeight.bold,
-                            color: Colors.white,
-                            fontFamily: 'Orbitron',
+                            color: Colors.blue.shade900,
                             letterSpacing: 2.0,
                           ),
                         ),
@@ -208,8 +205,7 @@ class _DiceGameState extends State<DiceGame> {
                           style: TextStyle(
                             fontSize: 25.0,
                             fontWeight: FontWeight.bold,
-                            color: Colors.white,
-                            fontFamily: 'Orbitron',
+                            color: Colors.green,
                             letterSpacing: 2.0,
                           ),
                         ),
@@ -222,15 +218,14 @@ class _DiceGameState extends State<DiceGame> {
                 children: [
                   Expanded(
                     child: Container(
-                      padding: EdgeInsets.all(30.0),
+                      padding: EdgeInsets.all(15.0),
                       child: Center(
                         child: Text(
-                          'Player 3',
+                          'Usman',
                           style: TextStyle(
                             fontSize: 20.0,
                             fontWeight: FontWeight.bold,
-                            color: Colors.blue,
-                            fontFamily: 'Orbitron',
+                            color: Colors.blue.shade900,
                             letterSpacing: 2.0,
                           ),
                         ),
@@ -239,15 +234,14 @@ class _DiceGameState extends State<DiceGame> {
                   ),
                   Expanded(
                     child: Container(
-                      padding: EdgeInsets.all(30.0),
+                      padding: EdgeInsets.all(15.0),
                       child: Center(
                         child: Text(
-                          'Player 4',
+                          'Zeeshan',
                           style: TextStyle(
                             fontSize: 20.0,
                             fontWeight: FontWeight.bold,
                             color: Colors.green,
-                            fontFamily: 'Orbitron',
                             letterSpacing: 2.0,
                           ),
                         ),
@@ -274,7 +268,8 @@ class _DiceGameState extends State<DiceGame> {
                           : null,
                       child: Image.asset(
                         'assets/images/Dice $bottomleftDiceNumber.png',
-                        //color: Colors.white,
+                        width: 120,
+                        height: 120,
                       ),
                     ),
                   ),
@@ -294,21 +289,19 @@ class _DiceGameState extends State<DiceGame> {
                           : null,
                       child: Image.asset(
                         'assets/images/Dice $bottomrightDiceNumber.png',
-                        //color: Colors.white,
+                        width: 120,
+                        height: 120,
                       ),
                     ),
                   ),
                 ],
               ),
-              SizedBox(
-                height: 6.0,
-              ),
               Text(
-                'Turns Left',
+                'Rolled Left',
                 style: TextStyle(
                   fontSize: 20.0,
-                  color: Colors.white,
-                  fontFamily: 'Orbitron',
+                  fontWeight: FontWeight.bold,
+                  color: Colors.blue.shade900,
                   letterSpacing: 2.0,
                 ),
               ),
@@ -333,9 +326,9 @@ class _DiceGameState extends State<DiceGame> {
                 child: Text(
                   '$turnsLeft',
                   style: TextStyle(
-                    color: Colors.white,
+                    color: Colors.blue.shade900,
                     fontSize: 20.0,
-                    fontFamily: 'Orbitron',
+                    fontWeight: FontWeight.bold,
                     letterSpacing: 2.0,
                   ),
                 ),
