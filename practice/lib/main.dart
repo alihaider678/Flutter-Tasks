@@ -30,12 +30,12 @@ class _DiceGameState extends State<DiceGame> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        backgroundColor: Colors.grey.shade200,
+        backgroundColor: Colors.yellow,
         appBar: AppBar(
-          title: Text('4 candidate roll Dice game',
-          style: TextStyle(color: Colors.yellow),),
+          title: Text('4 player Dice game',
+          style: TextStyle(color: Colors.white),),
           // backgroundColor: Colors.teal[200],
-          backgroundColor: Colors.blue,
+          backgroundColor: Colors.black,
           centerTitle: true,
         ),
         body: SingleChildScrollView(
@@ -43,14 +43,16 @@ class _DiceGameState extends State<DiceGame> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
-                'Remaining ROLL',
+                'ROLL Count Left',
                 style: TextStyle(
-                  fontSize: 30,
-                  color: Colors.red,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 20,
+                  color: Colors.black,
                   fontFamily: 'Orbitron',
                   letterSpacing: 2.0,
                 ),
               ),
+              SizedBox(height: 12),
               TextButton(
                 onPressed: () {
                   setState(() {
@@ -72,7 +74,7 @@ class _DiceGameState extends State<DiceGame> {
                 child: Text(
                   '$roll',
                   style: TextStyle(
-                    color: Colors.red,
+                    color: Colors.black,
                     fontSize: 30,
                     fontWeight: FontWeight.bold,
                     fontFamily: 'Orbitron',
@@ -98,9 +100,9 @@ class _DiceGameState extends State<DiceGame> {
                           : null,
                       child: Image.asset(
                         'images/dice$first.png',
-                        color: Colors.red,
-                        width: 130,
-                        height: 130,
+                        //color: Colors.red,
+                        width: 100,
+                        height: 100,
                       ),
                     ),
                   ),
@@ -137,14 +139,15 @@ class _DiceGameState extends State<DiceGame> {
                           : null,
                       child: Image.asset(
                         'images/dice$second.png',
-                        color: Colors.green,
-                        width: 130,
-                        height: 130,
+                        //color: Colors.green,
+                        width: 100,
+                        height: 100,
                       ),
                     ),
                   ),
                 ],
               ),
+              SizedBox(height: 22),
               Row(
                 children: [
                   Expanded(
@@ -181,13 +184,14 @@ class _DiceGameState extends State<DiceGame> {
                   ),
                 ],
               ),
+              SizedBox(height: 22),
               Row(
                 children: [
                   Expanded(
                     child: Container(
                       child: Center(
                         child: Text(
-                          'Candidate 1',
+                          'P 1',
                           style: TextStyle(
                             fontSize: 20.0,
                             fontWeight: FontWeight.bold,
@@ -203,7 +207,7 @@ class _DiceGameState extends State<DiceGame> {
                     child: Container(
                       child: Center(
                         child: Text(
-                          'Candidate 2',
+                          'P 2',
                           style: TextStyle(
                             fontSize: 20.0,
                             fontWeight: FontWeight.bold,
@@ -217,6 +221,7 @@ class _DiceGameState extends State<DiceGame> {
                   ),
                 ],
               ),
+              SizedBox(height: 22),
               Row(
                 children: [
                   Expanded(
@@ -235,9 +240,9 @@ class _DiceGameState extends State<DiceGame> {
                           : null,
                       child: Image.asset(
                         'images/dice$third.png',
-                        color: Colors.blue,
-                        width: 130,
-                        height: 130,
+                       // color: Colors.blue,
+                        width: 100,
+                        height: 100,
                       ),
                     ),
                   ),
@@ -257,14 +262,15 @@ class _DiceGameState extends State<DiceGame> {
                           : null,
                       child: Image.asset(
                         'images/dice$fourth.png',
-                        color: Colors.yellow,
-                        width: 130,
-                        height: 130,
+                       // color: Colors.yellow,
+                        width: 100,
+                        height: 100,
                       ),
                     ),
                   ),
                 ],
               ),
+              SizedBox(height: 22),
               Row(
                 children: [
                   Expanded(
@@ -301,13 +307,14 @@ class _DiceGameState extends State<DiceGame> {
                   ),
                 ],
               ),
+              SizedBox(height: 22),
               Row(
                 children: [
                   Expanded(
                     child: Container(
                       child: Center(
                         child: Text(
-                          'Candidate 3',
+                          'P 3',
                           style: TextStyle(
                             fontSize: 20.0,
                             fontWeight: FontWeight.bold,
@@ -323,7 +330,7 @@ class _DiceGameState extends State<DiceGame> {
                     child: Container(
                       child: Center(
                         child: Text(
-                          'Candidate 4',
+                          'P 4',
                           style: TextStyle(
                             fontSize: 20.0,
                             fontWeight: FontWeight.bold,

@@ -32,7 +32,7 @@ class _DiceGameState extends State<DiceGame> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        //backgroundColor: Colors.blue.shade900,
+        backgroundColor: Colors.grey.shade200,
         appBar: AppBar(
           title: Text('Dice Roller Game'),
           backgroundColor: Colors.blue.shade900,
@@ -85,9 +85,9 @@ class _DiceGameState extends State<DiceGame> {
                       padding: EdgeInsets.all(15.0),
                       child: Center(
                         child: Text(
-                          'Abdullah',
+                          'Ali',
                           style: TextStyle(
-                            fontSize: 20.0,
+                            fontSize: 20,
                             fontWeight: FontWeight.bold,
                             color: Colors.red,
                             letterSpacing: 2.0,
@@ -101,9 +101,9 @@ class _DiceGameState extends State<DiceGame> {
                       padding: EdgeInsets.all(15.0),
                       child: Center(
                         child: Text(
-                          'Ali',
+                          'Mailan',
                           style: TextStyle(
-                            fontSize: 20.0,
+                            fontSize: 20,
                             fontWeight: FontWeight.bold,
                             color: Colors.yellow,
                             letterSpacing: 2.0,
@@ -157,11 +157,11 @@ class _DiceGameState extends State<DiceGame> {
                             p3IsEnabled = false;
                             p4IsEnabled = false;
                             if (playerOneScore > playerTwoScore) {
-                              turnsLeft = ' won, tap to play again!';
+                              turnsLeft = 'Ali won, tap to play again!';
                             } else if (playerTwoScore == playerOneScore) {
                               turnsLeft = 'Drawn, tap to replay!';
                             } else {
-                              turnsLeft = 'Ali won, tap to play again!';
+                              turnsLeft = 'Mailan won, tap to play again!';
                             }
                           }
                         });
@@ -221,7 +221,7 @@ class _DiceGameState extends State<DiceGame> {
                       padding: EdgeInsets.all(15.0),
                       child: Center(
                         child: Text(
-                          'Usman',
+                          'Abubaker',
                           style: TextStyle(
                             fontSize: 20.0,
                             fontWeight: FontWeight.bold,
@@ -237,7 +237,7 @@ class _DiceGameState extends State<DiceGame> {
                       padding: EdgeInsets.all(15.0),
                       child: Center(
                         child: Text(
-                          'Zeeshan',
+                          'Husn e',
                           style: TextStyle(
                             fontSize: 20.0,
                             fontWeight: FontWeight.bold,
