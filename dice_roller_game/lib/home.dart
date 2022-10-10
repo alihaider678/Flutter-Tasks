@@ -110,7 +110,6 @@ class _HomeState extends State<Home> {
                     setState(() {
                       leftDiceNumber = Random().nextInt(6) + 1;
                       playerOneScore += leftDiceNumber;
-                      turnsLeft -= 1;
                     });
                     p1IsEnabled = false;
                     p2IsEnabled = true;
@@ -130,7 +129,7 @@ class _HomeState extends State<Home> {
                   onPressed: p2IsEnabled
                       ? () {
                     setState(() {
-                      turnsLeft -= 1;
+
                       if (turnsLeft > 0) {
                         rightDiceNumber = Random().nextInt(6) + 1;
                         playerTwoScore += rightDiceNumber;
@@ -247,7 +246,6 @@ class _HomeState extends State<Home> {
                     setState(() {
                       bottomleftDiceNumber = Random().nextInt(6) + 1;
                       playerThreeScore += bottomleftDiceNumber;
-                      turnsLeft -= 1;
                     });
                     p1IsEnabled = false;
                     p2IsEnabled = false;
