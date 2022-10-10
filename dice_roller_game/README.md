@@ -1,16 +1,3 @@
-# dice_roller_game
 
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+<img width="371" alt="2" src="https://user-images.githubusercontent.com/114726530/194749905-114e8229-dc78-4468-a5ab-04dc05d75023.PNG">
+<img width="373" alt="1" src="https://user-images.githubusercontent.com/114726530/194749916-7337e131-d3c8-4a9a-a245-10ec262ef926.PNG">
