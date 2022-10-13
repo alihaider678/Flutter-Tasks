@@ -224,7 +224,7 @@ class _HomeState extends State<Home> {
                   padding: EdgeInsets.all(15.0),
                   child: Center(
                     child: Text(
-                      'Husn e',
+                      'Unknown',
                       style: TextStyle(
                         fontSize: 20.0,
                         fontWeight: FontWeight.bold,
