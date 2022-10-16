@@ -58,10 +58,31 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
+        leading: Icon(Icons.menu),
+        actions: [
+          Padding(
+            padding: const EdgeInsets.only(right: 20.0),
+            child: Icon(Icons.person),
+          )
+        ],
         centerTitle: true,
-        backgroundColor: Colors.amberAccent,
+        backgroundColor: Colors.blue.shade900,
         title: Text('Matching Game'),
       ),
+      bottomNavigationBar: BottomNavigationBar(items: [
+        BottomNavigationBarItem(
+          icon: Icon(Icons.home),
+          label: '',
+        ),
+        BottomNavigationBarItem(
+          icon: Icon(Icons.favorite),
+          label: '',
+        ),
+        BottomNavigationBarItem(
+          icon: Icon(Icons.notifications),
+          label: '',
+        ),
+      ]),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(16.0),
         child: Column(
