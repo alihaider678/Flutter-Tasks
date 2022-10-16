@@ -69,17 +69,22 @@ class _HomePageState extends State<HomePage> {
         backgroundColor: Colors.blue.shade900,
         title: Text('Matching Game'),
       ),
-      bottomNavigationBar: BottomNavigationBar(items: [
+      bottomNavigationBar: BottomNavigationBar(
+          backgroundColor: Colors.blue.shade900,
+          items: [
         BottomNavigationBarItem(
-          icon: Icon(Icons.home),
+          icon: Icon(Icons.home,
+            color: Colors.white,),
           label: '',
         ),
         BottomNavigationBarItem(
-          icon: Icon(Icons.favorite),
+          icon: Icon(Icons.favorite,
+          color: Colors.white,),
           label: '',
         ),
         BottomNavigationBarItem(
-          icon: Icon(Icons.notifications),
+          icon: Icon(Icons.notifications,
+            color: Colors.white,),
           label: '',
         ),
       ]),
