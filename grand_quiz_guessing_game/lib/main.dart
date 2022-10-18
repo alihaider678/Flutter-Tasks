@@ -69,23 +69,26 @@ class _ShowNumberState extends State<ShowNumber> {
 
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.red.shade50,
+      //backgroundColor: Colors.red.shade50,
       appBar: AppBar(
-        backgroundColor: Colors.red,
-        title: Text("GenerateNumber"),
+        backgroundColor: Colors.blue.shade900,
+        centerTitle: true,
+        title: Text("Guessing Game"),
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Padding(
-            padding: const EdgeInsets.all(15.0),
+            padding: const EdgeInsets.all(50.0),
             child: SizedBox(
+              //width: 10,
+              height: 50,
               child: MaterialButton(
-                color: Colors.red,
+                color: Colors.orangeAccent,
                 child: Text(
-                  "Press Me",
-                  style: TextStyle(fontSize: 30, color: Colors.white),
+                  "Restart",
+                  style: TextStyle(fontSize: 20, color: Colors.white),
                 ),
                 onPressed: () {
                   neewGuss = [];
