@@ -2,92 +2,142 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 
-void main() => runApp(MyApp());
+void main() {
+  runApp( MyApp());
+}
 
 class MyApp extends StatelessWidget {
 
+
+  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: MyHomePage(),
+      home: ShowNumber(),
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
+class ShowNumber extends StatefulWidget {
+  ShowNumber({
+    Key? key,
+  }) : super(key: key);
 
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
+  State<ShowNumber> createState() => _ShowNumberState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
-  TextEditingController controller = TextEditingController();
-  int randomNumber = Random().nextInt(100);
-  String message;
-
-  checkAnswer(int answerNumber) {
+class _ShowNumberState extends State<ShowNumber> {
+  @override
+  int num1 = 0;
+  int num2 = 0;
+  int num3 = 0;
+  List<ItemModel> neewGuss = [ItemModel(0, 0, false)];
+  ItemModel correctNumber = ItemModel(0, -1, false);
+  ItemModel selectdNumber = ItemModel(0, -1, false);
+  Random random = Random();
+  void fun1() {
+    var first = 34;
+    var second = 90;
+    num1 = first + random.nextInt(second - first);
+    ItemModel a = ItemModel(1, num1, false);
     setState(() {
-      if (answerNumber == randomNumber) {
-        message = 'It is $randomNumber, Congratulation!';
-      } else if (answerNumber < randomNumber) {
-        message = 'The number is greater!';
-      } else {
-        message = 'Try smaller number!';
-      }
-      controller.clear();
+      neewGuss.add(a);
     });
   }
 
+  void fun2() {
+    var first = 34;
+    var second = 90;
+    num2 = first + random.nextInt(second - first);
+    ItemModel a = ItemModel(1, num2, false);
+    setState(() {
+      neewGuss.add(a);
+    });
+  }
 
-  @override
+  void fun3() {
+    var first = 34;
+    var second = 90;
+    num3 = first + random.nextInt(second - first);
+    ItemModel a = ItemModel(1, num3, false);
+    setState(() {
+      neewGuss.add(a);
+    });
+  }
+
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.red.shade50,
       appBar: AppBar(
-        backgroundColor: Colors.indigo.shade900,
-        title: Text("My Counter App"),
-        centerTitle: true,
+        backgroundColor: Colors.red,
+        title: Text("GenerateNumber"),
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(32.0),
-        child: Column(
-          children: <Widget>[
-            Text(
-              'My number is in rage 0 - 100',
-              style: TextStyle(fontSize: 20),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(50.0),
-              child: TextField(
-                controller: controller,
-                decoration: InputDecoration(hintText: 'Type your guess'),
-                keyboardType: TextInputType.number,
-              ),
-            ),
-            Text(
-              '$message',
-              style: TextStyle(fontSize: 15),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(24.0),
-              child: ElevatedButton(
-                child: Text('Check'),
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Padding(
+            padding: const EdgeInsets.all(15.0),
+            child: SizedBox(
+              child: MaterialButton(
+                color: Colors.red,
+                child: Text(
+                  "Press Me",
+                  style: TextStyle(fontSize: 30, color: Colors.white),
+                ),
                 onPressed: () {
-                  checkAnswer(int.parse(controller.text));
+                  neewGuss = [];
+                  correctNumber = ItemModel(0, -1, false);
+                  fun1();
+                  fun2();
+                  fun3();
+                  correctNumber = neewGuss[0 + random.nextInt(2)];
                 },
               ),
-            )
-          ],
-        ),
+            ),
+          ),
+          Column(
+            children: neewGuss!.map((item) {
+              return Padding(
+                  padding: const EdgeInsets.all(15.0),
+                  child: GestureDetector(
+                    onTap: () {
+                      setState(() {
+                        selectdNumber = item;
+                        selectdNumber.isCorrect = correctNumber.num == item.num;
+                      });
+                    },
+                    child: Container(
+                        height: 50,
+                        width: 150,
+                        decoration: BoxDecoration(
+                            color: item.num == selectdNumber.num
+                                ? ((selectdNumber.isCorrect ?? false)
+                                ? Colors.green
+                                : Colors.red)
+                                : Colors.black),
+                        child: Center(
+                          child: Text(
+                            item.num.toString(),
+                            style: TextStyle(fontSize: 25, color: Colors.white),
+                          ),
+                        )),
+                  ));
+            }).toList(),
+          ),
+        ],
       ),
     );
   }
-
-
-  @override
-  void dispose() {
-    super.dispose();
-    controller.dispose();
-  }
 }
 
+class ItemModel {
+  int? id;
+  int? num;
+
+  bool? isCorrect;
+
+  ItemModel(this.id, this.num, this.isCorrect);
+}
