@@ -1,6 +1,6 @@
 [
     {
-        "1": "Which of the following is not a C++ Header file ?",
+        "1": " Which of the following type is provided by C++ but not C?",
         "2": "Who invented C++?",
         "3": "What is C++?",
         "4": "Which of the following is used for comments in C++?",
@@ -8,10 +8,10 @@
     },
     {
         "1": {
-            "a": "conio.h",
-            "b": "cstdlib.h",
-            "c": "stdio.h",
-            "d": "math.h"
+            "a": " double",
+            "b": "float",
+            "c": "int",
+            "d": "bool"
         },
         "2": {
             "a": "Dennis Ritchie",
@@ -39,7 +39,7 @@
         }
     },
     {
-        "1": "stdio.h",
+        "1": "bool",
         "2": "Bjarne Stroustrup",
         "3": "C++ supports both procedural and object oriented programming language",
         "4": "both // comment or /* comment */",

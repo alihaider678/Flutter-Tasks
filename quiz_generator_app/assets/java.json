@@ -1,6 +1,6 @@
 [
     {
-        "1": "What Will Be The Output Of the Following Code ?\nif(1 + 1 + 1 + 1 + 1 == 5){\n\tSystem.out.print(\"TRUE\");\n}\n\telse{\n\tSystem.out.print(\"FALSE\");\n};",
+        "1": "What is the extension of java code files?",
         "2": "Who invented Java Programming?",
         "3": " Which statement is true about Java?",
         "4": "Which component is used to compile, debug and execute the java programs?",
@@ -8,10 +8,10 @@
     },
     {
         "1": {
-            "a": "TRUE",
-            "b": "BOTH",
-            "c": "ERROR",
-            "d": "FALSE"
+            "a": ".js",
+            "b": ".txt",
+            "c": ".class",
+            "d": ".java"
         },
         "2": {
             "a": "Guido van Rossum",
@@ -39,7 +39,7 @@
         }
     },
     {
-        "1": "TRUE",
+        "1": ".java",
         "2": "James Gosling",
         "3": "Java is a platform-independent programming language",
         "4": "JDK",

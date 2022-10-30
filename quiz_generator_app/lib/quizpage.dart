@@ -76,8 +76,8 @@ class _quizpageState extends State<quizpage> {
   bool disableAnswer = false;
   // extra varibale to iterate
   int j = 1;
-  int timer = 5;
-  String showtimer = "5";
+  int timer = 10;
+  String showtimer = "10";
   var random_array;
 
   Map<String, Color> btncolor = {
@@ -160,7 +160,7 @@ class _quizpageState extends State<quizpage> {
 
   void nextquestion() {
     canceltimer = false;
-    timer = 5;
+    timer = 10;
     setState(() {
       if (j < 10) {
         i = random_array[j];

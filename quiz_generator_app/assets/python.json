@@ -1,6 +1,6 @@
 [
     {
-        "1": "What Will Be The Output Of the Following Code ?\na = \"p\" * 3\nprint(a)",
+        "1": "What does pip stand for python?",
         "2": "Who developed Python Programming Language ?",
         "3": "Which type of Programming does Python support ?",
         "4": "Is Python case sensitive when dealing with identifiers ?",
@@ -8,10 +8,10 @@
     },
     {
         "1": {
-            "a": "pp",
-            "b": "ppp",
-            "c": "3p",
-            "d": "p3"
+            "a": "unlimited length",
+            "b": "all private members must have leading and trailing underscores",
+            "c": "Preferred Installer Program",
+            "d": "none of the mentioned"
         },
         "2": {
             "a": "Wick van Rossum",
@@ -39,7 +39,7 @@
         }
     },
     {
-        "1": "ppp",
+        "1": "Preferred Installer Program",
         "2": "Guido van Rossum",
         "3": "all of the mentioned",
         "4": "no",
