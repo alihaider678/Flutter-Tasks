@@ -76,8 +76,8 @@ class _quizpageState extends State<quizpage> {
   bool disableAnswer = false;
   // extra varibale to iterate
   int j = 1;
-  int timer = 10;
-  String showtimer = "10";
+  int timer = 5;
+  String showtimer = "5";
   var random_array;
 
   Map<String, Color> btncolor = {
@@ -160,7 +160,7 @@ class _quizpageState extends State<quizpage> {
 
   void nextquestion() {
     canceltimer = false;
-    timer = 10;
+    timer = 5;
     setState(() {
       if (j < 10) {
         i = random_array[j];
@@ -184,7 +184,7 @@ class _quizpageState extends State<quizpage> {
     // in the previous version this was
     // mydata[2]["1"] == mydata[1]["1"][k]
     // which i forgot to change
-    // so nake sure that this is now corrected
+    // so mnake sure that this is now corrected
     if (mydata[2][i.toString()] == mydata[1][i.toString()][k]) {
       // just a print sattement to check the correct working
       // debugPrint(mydata[2][i.toString()] + " is equal to " + mydata[1][i.toString()][k]);
@@ -204,7 +204,7 @@ class _quizpageState extends State<quizpage> {
     });
     // nextquestion();
     // changed timer duration to 1 second
-    Timer(Duration(seconds: 2), nextquestion);
+    Timer(Duration(seconds: 1), nextquestion);
   }
 
   Widget choicebutton(String k) {
@@ -245,7 +245,7 @@ class _quizpageState extends State<quizpage> {
             context: context,
             builder: (context) => AlertDialog(
                   title: Text(
-                    "Quizstar",
+                    "QuizApp",
                   ),
                   content: Text("You Can't Go Back At This Stage."),
                   actions: <Widget>[

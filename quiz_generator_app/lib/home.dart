@@ -110,7 +110,7 @@ class _homepageState extends State<homepage> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          "Quizstar",
+          "QuizApp",
           style: TextStyle(
             fontFamily: "Quando",
           ),
