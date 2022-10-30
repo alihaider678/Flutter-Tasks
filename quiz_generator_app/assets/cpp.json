@@ -1,15 +1,10 @@
 [
     {
         "1": "Which of the following is not a C++ Header file ?",
-        "2": "Which function finds out the Variable type in Python ?",
-        "3": "Which of the following keyword is used to define a function in Python ?",
-        "4": "Which of the following is a print Function in Python ?",
-        "5": "Which function finds out the Variable type in Python ?",
-        "6": "Which of the following keyword is used to define a function in Python ?",
-        "7": "Which function finds out the Variable type in Python ?",
-        "8": "Which of the following keyword is used to define a function in Python ?",
-        "9": "Which function finds out the Variable type in Python ?",
-        "10": "Which of the following keyword is used to define a function in Python ?"
+        "2": "Who invented C++?",
+        "3": "What is C++?",
+        "4": "Which of the following is used for comments in C++?",
+        "5": "Which of the following user-defined header file extension used in c++?"
     },
     {
         "1": {
@@ -19,70 +14,35 @@
             "d": "math.h"
         },
         "2": {
-            "a": "typedef",
-            "b": "typeof",
-            "c": "type",
-            "d": "find"
+            "a": "Dennis Ritchie",
+            "b": "Ken Thompson",
+            "c": "Brian Kernighan",
+            "d": "Bjarne Stroustrup"
         },
         "3": {
-            "a": "func",
-            "b": "def",
-            "c": "void",
-            "d": "function"
+            "a": "C++ is an object oriented programming language",
+            "b": "C++ is a procedural programming language",
+            "c": " C++ supports both procedural and object oriented programming language",
+            "d": "C++ is a functional programming language"
         },
         "4": {
-            "a": "cout",
-            "b": "print",
-            "c": "println",
-            "d": "stderr"
+            "a": "/* comment */",
+            "b": " // comment */",
+            "c": "// comment",
+            "d": "both // comment or /* comment */"
         },
         "5": {
-            "a": "typedef",
-            "b": "typeof",
-            "c": "type",
-            "d": "find"
-        },
-        "6": {
-            "a": "func",
-            "b": "def",
-            "c": "void",
-            "d": "function"
-        },
-        "7": {
-            "a": "typedef",
-            "b": "typeof",
-            "c": "type",
-            "d": "find"
-        },
-        "8": {
-            "a": "func",
-            "b": "def",
-            "c": "void",
-            "d": "function"
-        },
-        "9": {
-            "a": "typedef",
-            "b": "typeof",
-            "c": "type",
-            "d": "find"
-        },
-        "10": {
-            "a": "func",
-            "b": "def",
-            "c": "void",
-            "d": "function"
+            "a": "hg",
+            "b": "cpp",
+            "c": "h",
+            "d": "hf"
         }
     },
     {
         "1": "stdio.h",
-        "2": "type",
-        "3": "def",
-        "4": "print",
-        "5": "type",
-        "6": "def",
-        "7": "type",
-        "8": "def",
-        "9": "type",
-        "10": "def"
+        "2": "Bjarne Stroustrup",
+        "3": "C++ supports both procedural and object oriented programming language",
+        "4": "both // comment or /* comment */",
+        "5": "h"
     }
 ]

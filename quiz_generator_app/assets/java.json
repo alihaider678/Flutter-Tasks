@@ -1,15 +1,10 @@
 [
     {
         "1": "What Will Be The Output Of the Following Code ?\nif(1 + 1 + 1 + 1 + 1 == 5){\n\tSystem.out.print(\"TRUE\");\n}\n\telse{\n\tSystem.out.print(\"FALSE\");\n};",
-        "2": "Which function finds out the Variable type in Python ? 2",
-        "3": "Which of the following keyword is used to define a function in Python ? 3",
-        "4": "Which of the following is a print Function in Python ? 4",
-        "5": "Which function finds out the Variable type in Python ? 5",
-        "6": "Which of the following keyword is used to define a function in Python ? 6",
-        "7": "Which function finds out the Variable type in Python ? 7",
-        "8": "Which of the following keyword is used to define a function in Python ?  8",
-        "9": "Which function finds out the Variable type in Python ? 9",
-        "10": "Which of the following keyword is used to define a function in Python ? 10"
+        "2": "Who invented Java Programming?",
+        "3": " Which statement is true about Java?",
+        "4": "Which component is used to compile, debug and execute the java programs?",
+        "5": "Which one of the following is not a Java feature?"
     },
     {
         "1": {
@@ -19,70 +14,35 @@
             "d": "FALSE"
         },
         "2": {
-            "a": "typedef",
-            "b": "typeof",
-            "c": "type",
-            "d": "find"
+            "a": "Guido van Rossum",
+            "b": "James Gosling",
+            "c": "Dennis Ritchie",
+            "d": "Bjarne Stroustrup"
         },
         "3": {
-            "a": "func",
-            "b": "def",
-            "c": "void",
-            "d": "function"
+            "a": "Java is a sequence-dependent programming language",
+            "b": " Java is a code dependent programming language",
+            "c": "Java is a platform-dependent programming language",
+            "d": "Java is a platform-independent programming language"
         },
         "4": {
-            "a": "cout",
-            "b": "print",
-            "c": "println",
-            "d": "stderr"
+            "a": "JRE",
+            "b": "JIT",
+            "c": "JDK",
+            "d": "JVM"
         },
         "5": {
-            "a": "typedef",
-            "b": "typeof",
-            "c": "type",
-            "d": "find"
-        },
-        "6": {
-            "a": "func",
-            "b": "def",
-            "c": "void",
-            "d": "function"
-        },
-        "7": {
-            "a": "typedef",
-            "b": "typeof",
-            "c": "type",
-            "d": "find"
-        },
-        "8": {
-            "a": "func",
-            "b": "def",
-            "c": "void",
-            "d": "function"
-        },
-        "9": {
-            "a": "typedef",
-            "b": "typeof",
-            "c": "type",
-            "d": "find"
-        },
-        "10": {
-            "a": "func",
-            "b": "def",
-            "c": "void",
-            "d": "function"
+            "a": " Object-oriented",
+            "b": "Use of pointers",
+            "c": "Portable",
+            "d": "Dynamic and Extensible"
         }
     },
     {
         "1": "TRUE",
-        "2": "type",
-        "3": "def",
-        "4": "print",
-        "5": "type",
-        "6": "def",
-        "7": "type",
-        "8": "def",
-        "9": "type",
-        "10": "def"
+        "2": "James Gosling",
+        "3": "Java is a platform-independent programming language",
+        "4": "JDK",
+        "5": "Use of pointers"
     }
 ]
