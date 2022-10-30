@@ -1,41 +1,39 @@
+import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:quizapp/main.dart';
+import 'package:quizstar/home.dart';
 
-class Splash extends StatefulWidget {
-  //const Splash({Key? key}) : super(key: key);
-
+class splashscreen extends StatefulWidget {
   @override
-  _SplashState createState() => _SplashState();
+  _splashscreenState createState() => _splashscreenState();
 }
 
-class _SplashState extends State<Splash> {
-  void initState() {
+class _splashscreenState extends State<splashscreen> {
+
+  @override
+  void initState(){
     super.initState();
-    _mainPage();
+    Timer(Duration(seconds: 3), (){
+      Navigator.of(context).pushReplacement(MaterialPageRoute(
+        builder: (context) => homepage(),
+      ));
+    });
   }
 
-  _mainPage() async {
-    await Future.delayed(
-      const Duration(milliseconds: 2900),
-    );
-    Navigator.pushReplacement(
-        context, MaterialPageRoute(builder: (context) => QuizApp()));
-  }
-
+  // added test yourself
+  // and made the text to align at center 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      //backgroundColor: Colors.blue.shade900,
+      backgroundColor: Colors.indigo,
       body: Center(
-        child: Column(
-          children: [
-            Image(
-              height: 500,
-              width: 300,
-              image: AssetImage('images/splash.png'),
-            ),
-            CircularProgressIndicator(),
-          ],
+        child: Text(
+          "Quizstar\nTest Yourself !!",
+          style: TextStyle(
+            fontSize: 50.0,
+            color: Colors.white,
+            fontFamily: "Satisfy",
+          ),
+          textAlign: TextAlign.center,
         ),
       ),
     );
