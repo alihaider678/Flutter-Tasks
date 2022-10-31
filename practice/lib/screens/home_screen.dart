@@ -11,7 +11,7 @@ class HomeScreen extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Theme.of(context).backgroundColor,
         title: Text(
-          "Topics",
+          "Quizes",
           style: Theme.of(context).textTheme.headline1,
         ),
       ),

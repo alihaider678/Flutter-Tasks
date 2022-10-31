@@ -7,7 +7,7 @@ import '../state/quiz.dart';
 
 class CategoryList extends StatelessWidget {
   const CategoryList({Key? key}) : super(key: key);
-  static const List title = ["prophets", "Quran", "Solat","Ramadan","Hajj"];
+  static const List title = ["prophets", "Quran", "Salat","Ramadan","Hajj"];
 
   static int ind=0;
 

@@ -66,7 +66,7 @@ class QuizScreen extends StatelessWidget {
                         width: MediaQuery.of(context).size.width * .04,
                       ),
                       CustomTextButton(
-                          action: "Verify",
+                          action: "Hint",
                           onPressed: () {
                             state.verify();
                             if (state.customRadioT == AppEnum.NON) {

@@ -18,7 +18,7 @@ class Quiz {
                       Quiz("Name of each part of Quran is","juz", ["hifz","surat","juz","ayah"]),
                       Quiz("the 16th juz start in which surat","Al-Kahf", ["Al-Hijr","Al-Israa","Al-Kahf","Yaseen"])];
 
-  List<Quiz> Solat=[Quiz("what is the total sum of compulsory daily ra'akah performed in a day", "17", ["17","23","14","18"]),
+  List<Quiz> Salat=[Quiz("what is the total sum of compulsory daily ra'akah performed in a day", "17", ["17","23","14","18"]),
                     Quiz("How many times do we say Allahu-Akbar in the adhan", "6", ["4","6","5","8"]),
                     Quiz("what is prostration of forgetfulness called","sujuh sahwi", ["Qabli","sujuh sahwi","Ba'di","Ruku Sahwi"]),
                     Quiz("How many times does a Muslim pray in a day?","5", ["7","5","6","4"]),
@@ -36,4 +36,4 @@ class Quiz {
                     Quiz("Pilgrims throw rocks at a pillar representing ____ and all the evils in life", "Satan", ["Jesus","The pillars of Islam","Thieves","Satan"]),
                     Quiz("Pilgrims walk around the Ka'ba _____ times", "7", ["7","9","11","5"])];
 
-  List<List<Quiz>> section=[prophet,Quran,Solat,Ramadan,Hajj];
+  List<List<Quiz>> section=[prophet,Quran,Salat,Ramadan,Hajj];
