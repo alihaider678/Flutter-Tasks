@@ -15,9 +15,10 @@ class Quizzler extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(
                            centerTitle: true,
+                           backgroundColor: Colors.blue.shade900,
                            title:Text(
-                             'Quiz App',
-                             style: TextStyle(color: Colors.white),
+                             'Quiz Generate App',
+                             style: TextStyle(color: Colors.white,),
                            ),
                          ),
        body: start(),
@@ -46,52 +47,46 @@ class _startState extends State<start> {
     return SafeArea(
           //<-- SEE HERE
             child: Container(
-                color: Colors.amber,
+                //color: Colors.yellow,
                 child:Column(
                     children: [
                       SizedBox(
                         height: 40,
                       ),
                       Container(
-                        color: Colors.black87,
-                        height: 30,
+                        height: 50,
                         width: 200,
                         child: Text("Make Question Paper",textAlign: TextAlign.center,style: TextStyle(
-                            color: Colors.white,
+                            color: Colors.black,
                             fontWeight: FontWeight.bold,
                             fontFamily: 'Open Sans',
                             fontSize: 15),),),
                       SizedBox(
                         height: 30,
                       ),
-                      TextField(
-
-                        controller:  fieldText,
-                        decoration: InputDecoration(
-                          hintText: "Enter Your Question?",
-                          border: OutlineInputBorder(),
-                          suffixIcon: IconButton(
-                              onPressed:(){
-                                fieldText.clear();
-                              },
-                              icon: const Icon(Icons.clear_rounded)
+                      SizedBox( // <-- SEE HERE
+                        width: 600,
+                        child: TextField(
+                          decoration: InputDecoration(
+                            labelText: 'Enter your Choice',
+                            border: OutlineInputBorder(),
+                            suffixIcon: IconButton(
+                                onPressed:(){
+                                  fieldText.clear();
+                                },
+                                icon: const Icon(Icons.clear_rounded)
+                            ),
                           ),
-
-
                         ),
-
-
                       ),
                       const SizedBox(
-                        height: 8,
+                        height: 10,
                       ),
 
                       SizedBox(
                         height:100, //height of button
                         width:300, //width of button
                         child: ElevatedButton(
-
-
                             onPressed: (){
                               questionAnswer=true;
                               questionText=fieldText.text;
@@ -108,21 +103,13 @@ class _startState extends State<start> {
                                   context,
                                   MaterialPageRoute(builder: (context) =>  QuizPage()),
                                 );
-
                               }
-
-
-
-
                             },
-
                             style: ButtonStyle(
                                 elevation: MaterialStateProperty.all(8),
-
                                 backgroundColor: MaterialStateProperty.all(Colors.green)),
-                            child: const Text('true')),
+                            child: const Text('True')),
                       ),
-
                       SizedBox(
                         height: 20,
                       ),
@@ -130,8 +117,6 @@ class _startState extends State<start> {
                         height:100, //height of button
                         width:300, //width of button
                         child: ElevatedButton(
-
-
                             onPressed: (){
                               questionAnswer=false;
                               questionText=fieldText.text;
@@ -148,7 +133,7 @@ class _startState extends State<start> {
                             style: ButtonStyle(
                                 elevation: MaterialStateProperty.all(8),
                                 backgroundColor: MaterialStateProperty.all(Colors.red)),
-                            child: const Text('false')),
+                            child: const Text('False')),
                       ),
                       SizedBox(
                         height: 10,
@@ -198,9 +183,8 @@ class _QuizPageState extends State<QuizPage> {
               onPressed: (){
                 Navigator.of(context).pop();
               },
-              child: Text('oky',),
+              child: Text('OK',),
             ),
-
           ],
         );
         showDialog(
@@ -211,13 +195,11 @@ class _QuizPageState extends State<QuizPage> {
         );
         //TODO Step 4 Part C - reset the questionNumber,
         quizBrain.reset();
-
         //TODO Step 4 Part D - empty out the scoreKeeper.
         scoreKeeper = [];
         correct=0;
         wrong=0;
       }
-
       //TODO: Step 6 - If we've not reached the end, ELSE do the answer checking steps below 👇
       else {
         if (userPickedAnswer == correctAnswer) {
@@ -237,7 +219,6 @@ class _QuizPageState extends State<QuizPage> {
       }
     });
   }
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -247,7 +228,7 @@ class _QuizPageState extends State<QuizPage> {
               padding: EdgeInsets.only(top:20),
               child: Center(
                 child: Container(
-                  color: Colors.amber,
+                  //color: Colors.amber,
                   child: Padding(
                       padding: const EdgeInsets.all(20.0),
                       child: Container(
@@ -267,7 +248,7 @@ class _QuizPageState extends State<QuizPage> {
                                           textAlign: TextAlign.center,
                                           style: TextStyle(
                                             fontSize: 25.0,
-                                            color: Colors.white,
+                                            color: Colors.blue.shade900,
                                           ),
                                         ),
                                       ),
@@ -279,7 +260,7 @@ class _QuizPageState extends State<QuizPage> {
                                             backgroundColor: Colors.green, // Background Color
                                           ),
                                           child: Text(
-                                            'True',
+                                            'Yes',
                                             style: TextStyle(
                                               color: Colors.white,
                                               fontSize: 20.0,
@@ -304,7 +285,7 @@ class _QuizPageState extends State<QuizPage> {
                                             backgroundColor: Colors.red, // Background Color
                                           ),
                                           child: Text(
-                                            'False',
+                                            'No',
                                             style: TextStyle(
                                               fontSize: 20.0,
                                               color: Colors.white,
