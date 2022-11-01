@@ -228,7 +228,7 @@ class _QuizPageState extends State<QuizPage> {
               padding: EdgeInsets.only(top:20),
               child: Center(
                 child: Container(
-                  //color: Colors.amber,
+                  color: Colors.amber,
                   child: Padding(
                       padding: const EdgeInsets.all(20.0),
                       child: Container(
@@ -248,7 +248,7 @@ class _QuizPageState extends State<QuizPage> {
                                           textAlign: TextAlign.center,
                                           style: TextStyle(
                                             fontSize: 25.0,
-                                            color: Colors.blue.shade900,
+                                            //color: Colors.blue.shade900,
                                           ),
                                         ),
                                       ),
