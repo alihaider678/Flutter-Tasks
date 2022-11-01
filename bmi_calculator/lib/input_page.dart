@@ -5,7 +5,8 @@ import 'container_file.dart';
 
 const activeColor = Color(0xFF1D1E33);
 const deActiveColor = Color(0xFF111328);
-enum Gender{
+
+enum Gender {
   male,
   female,
 }
@@ -29,34 +30,34 @@ class _InputPageState extends State<InputPage> {
             child: Row(
               children: [
                 Expanded(
-                  child: GestureDetector(
-                    onTap: (){
+                  child: RepeatContainerCode(
+                    onPressed: () {
                       setState(() {
-                        selectGender=Gender.male;
+                        selectGender = Gender.male;
                       });
                     },
-                    child: RepeatContainerCode(
-                      colors: selectGender==Gender.male ? activeColor: deActiveColor,
-                      CardWidget: RepeatTextAndIconWidgets(
-                        iconData: FontAwesomeIcons.person,
-                        label: 'Male',
-                      ),
+                    colors: selectGender == Gender.male
+                        ? activeColor
+                        : deActiveColor,
+                    CardWidget: RepeatTextAndIconWidgets(
+                      iconData: FontAwesomeIcons.person,
+                      label: 'Male',
                     ),
                   ),
                 ),
                 Expanded(
-                  child: GestureDetector(
-                    onTap: (){
+                  child: RepeatContainerCode(
+                    onPressed: () {
                       setState(() {
-                        selectGender=Gender.female;
+                        selectGender = Gender.male;
                       });
                     },
-                    child: RepeatContainerCode(
-                      colors: selectGender==Gender.female ? activeColor: deActiveColor,
-                      CardWidget: RepeatTextAndIconWidgets(
-                        iconData: FontAwesomeIcons.personDress,
-                        label: 'Female',
-                      ),
+                    colors: selectGender == Gender.female
+                        ? activeColor
+                        : deActiveColor,
+                    CardWidget: RepeatTextAndIconWidgets(
+                      iconData: FontAwesomeIcons.personDress,
+                      label: 'Female',
                     ),
                   ),
                 ),
@@ -89,7 +90,3 @@ class _InputPageState extends State<InputPage> {
     );
   }
 }
-
-
-
-
