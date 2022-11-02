@@ -3,7 +3,7 @@ class RepeatContainerCode extends StatelessWidget {
   RepeatContainerCode({required this.colors, required this.CardWidget, required this.onPressed});
   final Color colors;
   final Widget CardWidget;
-  final Function onPressed;
+  void Function () ? onPressed;
 
   @override
   Widget build(BuildContext context) {

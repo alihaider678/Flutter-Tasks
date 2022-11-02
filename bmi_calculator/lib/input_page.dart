@@ -19,6 +19,7 @@ class _InputPageState extends State<InputPage> {
   late Gender selectGender;
   int sliderHeight = 180;
   int sliderWeight = 60;
+  int ageSlider = 20;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -99,7 +100,8 @@ class _InputPageState extends State<InputPage> {
                     inactiveColor: Color(0xFF8D8E98),
                   ),
                 ],
-              ), onPressed: null,
+              ),
+              onPressed: null,
             ),
           ),
           Expanded(
@@ -122,24 +124,103 @@ class _InputPageState extends State<InputPage> {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            
+                            RoundIcon(
+                              iconData: FontAwesomeIcons.minus,
+                              onPress: () {
+                                setState(() {
+                                  sliderWeight--;
+                                });
+                              },
+                            ),
+                            SizedBox(width: 10.0,),
+                            RoundIcon(
+                              iconData: FontAwesomeIcons.plus,
+                              onPress: () {
+                                setState(() {
+                                  sliderWeight++;
+                                });
+                              },
+                            ),
                           ],
                         )
                       ],
                     ),
-
+                    onPressed: () {},
                   ),
                 ),
                 Expanded(
                   child: RepeatContainerCode(
                     colors: Color(0xFF1D1E33),
+                    CardWidget: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          'Age',
+                          style: klabelstyle,
+                        ),
+                        Text(
+                          ageSlider.toString(),
+                          style: kNumberStyle,
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            RoundIcon(
+                              iconData: FontAwesomeIcons.minus,
+                              onPress: () {
+                                setState(() {
+                                  ageSlider--;
+                                });
+                              },
+                            ),
+                            SizedBox(width: 10.0,),
+                            RoundIcon(
+                              iconData: FontAwesomeIcons.plus,
+                              onPress: () {
+                                setState(() {
+                                  ageSlider++;
+                                });
+                              },
+                            ),
+                          ],
+                        )
+                      ],
+                    ),
+                    onPressed: () {},
                   ),
                 ),
               ],
             ),
           ),
+          Container(
+            color: Color(0xFFEB1555),
+            margin: EdgeInsets.only(top: 10.0),
+            width: double.infinity,
+            height: 80.0,
+          ),
         ],
       ),
+    );
+  }
+}
+
+class RoundIcon extends StatelessWidget {
+  RoundIcon({required this.iconData, required this.onPress});
+  final IconData iconData;
+  final Function onPress;
+
+  @override
+  Widget build(BuildContext context) {
+    return RawMaterialButton(
+      elevation: 6.0,
+      child: Icon(iconData),
+      constraints: BoxConstraints.tightFor(
+        height: 56.0,
+        width: 56.0,
+      ),
+      shape: CircleBorder(),
+      fillColor: Color(0xFF4C4F5E),
+      onPressed: () {},
     );
   }
 }
