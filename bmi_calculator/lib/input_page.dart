@@ -18,6 +18,7 @@ class InputPage extends StatefulWidget {
 class _InputPageState extends State<InputPage> {
   late Gender selectGender;
   int sliderHeight = 180;
+  int sliderWeight = 60;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -98,7 +99,7 @@ class _InputPageState extends State<InputPage> {
                     inactiveColor: Color(0xFF8D8E98),
                   ),
                 ],
-              ),
+              ), onPressed: null,
             ),
           ),
           Expanded(
@@ -107,6 +108,26 @@ class _InputPageState extends State<InputPage> {
                 Expanded(
                   child: RepeatContainerCode(
                     colors: Color(0xFF1D1E33),
+                    CardWidget: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          'Weight',
+                          style: klabelstyle,
+                        ),
+                        Text(
+                          sliderWeight.toString(),
+                          style: kNumberStyle,
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            
+                          ],
+                        )
+                      ],
+                    ),
+
                   ),
                 ),
                 Expanded(
