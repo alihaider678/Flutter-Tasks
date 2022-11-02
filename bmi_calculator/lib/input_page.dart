@@ -5,7 +5,6 @@ import 'icon_text_file.dart';
 import 'container_file.dart';
 import 'constant.dart';
 
-
 enum Gender {
   male,
   female,
@@ -18,6 +17,7 @@ class InputPage extends StatefulWidget {
 
 class _InputPageState extends State<InputPage> {
   late Gender selectGender;
+  int sliderHeight = 180;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -69,9 +69,34 @@ class _InputPageState extends State<InputPage> {
             child: RepeatContainerCode(
               colors: Color(0xFF1D1E33),
               CardWidget: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text('Height',
-                  style: klabelstyle,)
+                  Text('Height', style: klabelstyle),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        sliderHeight.toString(),
+                        style: kNumberStyle,
+                      ),
+                      Text(
+                        'cm',
+                        style: klabelstyle,
+                      ),
+                    ],
+                  ),
+                  Slider(
+                    value: sliderHeight.toDouble(),
+                    min: 120.0,
+                    max: 220.0,
+                    onChanged: (double newvalue) {
+                      setState(() {
+                        sliderHeight = newvalue.round();
+                      });
+                    },
+                    activeColor: Color(0xFFEB1555),
+                    inactiveColor: Color(0xFF8D8E98),
+                  ),
                 ],
               ),
             ),
