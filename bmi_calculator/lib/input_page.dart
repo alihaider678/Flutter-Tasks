@@ -4,7 +4,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'icon_text_file.dart';
 import 'container_file.dart';
 import 'constant.dart';
-
+import 'result_file.dart';
 enum Gender {
   male,
   female,
@@ -132,7 +132,9 @@ class _InputPageState extends State<InputPage> {
                                 });
                               },
                             ),
-                            SizedBox(width: 10.0,),
+                            SizedBox(
+                              width: 10.0,
+                            ),
                             RoundIcon(
                               iconData: FontAwesomeIcons.plus,
                               onPress: () {
@@ -173,7 +175,9 @@ class _InputPageState extends State<InputPage> {
                                 });
                               },
                             ),
-                            SizedBox(width: 10.0,),
+                            SizedBox(
+                              width: 10.0,
+                            ),
                             RoundIcon(
                               iconData: FontAwesomeIcons.plus,
                               onPress: () {
@@ -192,11 +196,21 @@ class _InputPageState extends State<InputPage> {
               ],
             ),
           ),
-          Container(
-            color: Color(0xFFEB1555),
-            margin: EdgeInsets.only(top: 10.0),
-            width: double.infinity,
-            height: 80.0,
+          GestureDetector(
+            onTap: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>ResultScreen()));
+            },
+            child: Container(
+              child: Center(
+                  child: Text(
+                'Calculate',
+                style: kLargeButtonStyle,
+              )),
+              color: Color(0xFFEB1555),
+              margin: EdgeInsets.only(top: 10.0),
+              width: double.infinity,
+              height: 80.0,
+            ),
           ),
         ],
       ),
