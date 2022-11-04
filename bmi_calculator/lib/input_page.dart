@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'icon_text_file.dart';
 import 'container_file.dart';
-import 'constant.dart';
 import 'result_file.dart';
 import 'calculator_file.dart';
 
@@ -18,7 +17,7 @@ class InputPage extends StatefulWidget {
 }
 
 class _InputPageState extends State<InputPage> {
-  late Gender selectGender;
+  Gender ? selectGender;
   int sliderHeight = 180;
   int sliderWeight = 60;
   int ageSlider = 20;
@@ -102,8 +101,7 @@ class _InputPageState extends State<InputPage> {
                     inactiveColor: Color(0xFF8D8E98),
                   ),
                 ],
-              ),
-              onPressed: null,
+              ), onPressed: () {  },
             ),
           ),
           Expanded(
@@ -148,8 +146,7 @@ class _InputPageState extends State<InputPage> {
                           ],
                         )
                       ],
-                    ),
-                    onPressed: () {},
+                    ), onPressed: () {  },
                   ),
                 ),
                 Expanded(
@@ -191,8 +188,7 @@ class _InputPageState extends State<InputPage> {
                           ],
                         )
                       ],
-                    ),
-                    onPressed: () {},
+                    ), onPressed: () {  },
                   ),
                 ),
               ],
@@ -206,7 +202,7 @@ class _InputPageState extends State<InputPage> {
                   context,
                   MaterialPageRoute(
                       builder: (context) => ResultScreen(
-                            bmiResult: calc.CalculateBMI(),
+                            bmiResult: calc.CalculateBMI().toString(),
                             resultText: calc.getResult(),
                             interpretation: calc.getInterpretation(),
                           )));
@@ -244,8 +240,7 @@ class RoundIcon extends StatelessWidget {
         width: 56.0,
       ),
       shape: CircleBorder(),
-      fillColor: Color(0xFF4C4F5E),
-      onPressed: () {},
+      fillColor: Color(0xFF4C4F5E), onPressed: () {  },
     );
   }
 }

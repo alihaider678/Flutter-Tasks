@@ -11,6 +11,7 @@ class RepeatContainerCode extends StatelessWidget {
       onTap: onPressed,
       child: Container(
         margin: EdgeInsets.all(15.0),
+        child: CardWidget,
         decoration: BoxDecoration(
           color: colors,
           borderRadius: BorderRadius.circular(10.0),

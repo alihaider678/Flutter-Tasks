@@ -1,6 +1,5 @@
 import 'package:bmi_calculator/constant.dart';
 import 'package:flutter/material.dart';
-import 'constant.dart';
 
 class RepeatTextAndIconWidgets extends StatelessWidget {
   RepeatTextAndIconWidgets({required this.iconData, required this.label});

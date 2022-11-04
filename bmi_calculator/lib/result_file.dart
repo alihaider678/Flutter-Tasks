@@ -1,7 +1,6 @@
 import 'package:bmi_calculator/constant.dart';
 import 'package:bmi_calculator/container_file.dart';
 import 'package:flutter/material.dart';
-import 'constant.dart';
 import 'input_page.dart';
 
 class ResultScreen extends StatelessWidget {
