@@ -1,10 +1,11 @@
 import 'package:bmi_calculator/constant.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'icon_text_file.dart';
-import 'container_file.dart';
-import 'result_file.dart';
+
 import 'calculator_file.dart';
+import 'container_file.dart';
+import 'icon_text_file.dart';
+import 'result_file.dart';
 
 enum Gender {
   male,
@@ -17,10 +18,22 @@ class InputPage extends StatefulWidget {
 }
 
 class _InputPageState extends State<InputPage> {
-  Gender ? selectGender;
+  Gender? selectGender;
   int sliderHeight = 180;
   int sliderWeight = 60;
   int ageSlider = 20;
+  void incrementCounter() {
+    setState(() {
+      sliderWeight++;
+    });
+  }
+
+  void decrementCounter() {
+    setState(() {
+      sliderWeight--;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,7 +41,7 @@ class _InputPageState extends State<InputPage> {
         title: Text('BMI CALCULATOR'),
       ),
       body: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
+        //crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           Expanded(
             child: Row(
@@ -53,7 +66,7 @@ class _InputPageState extends State<InputPage> {
                   child: RepeatContainerCode(
                     onPressed: () {
                       setState(() {
-                        selectGender = Gender.male;
+                        selectGender = Gender.female;
                       });
                     },
                     colors: selectGender == Gender.female
@@ -101,7 +114,8 @@ class _InputPageState extends State<InputPage> {
                     inactiveColor: Color(0xFF8D8E98),
                   ),
                 ],
-              ), onPressed: () {  },
+              ),
+              onPressed: () {},
             ),
           ),
           Expanded(
@@ -128,7 +142,7 @@ class _InputPageState extends State<InputPage> {
                               iconData: FontAwesomeIcons.minus,
                               onPress: () {
                                 setState(() {
-                                  sliderWeight--;
+                                  sliderWeight = sliderWeight - 1;
                                 });
                               },
                             ),
@@ -139,14 +153,15 @@ class _InputPageState extends State<InputPage> {
                               iconData: FontAwesomeIcons.plus,
                               onPress: () {
                                 setState(() {
-                                  sliderWeight++;
+                                  sliderWeight = sliderWeight + 1;
                                 });
                               },
                             ),
                           ],
                         )
                       ],
-                    ), onPressed: () {  },
+                    ),
+                    onPressed: () {},
                   ),
                 ),
                 Expanded(
@@ -188,7 +203,8 @@ class _InputPageState extends State<InputPage> {
                           ],
                         )
                       ],
-                    ), onPressed: () {  },
+                    ),
+                    onPressed: () {},
                   ),
                 ),
               ],
@@ -197,22 +213,22 @@ class _InputPageState extends State<InputPage> {
           GestureDetector(
             onTap: () {
               CalculatorBrain calc =
-                  CalculatorBrain(height: sliderHeight, weight: sliderWeight);
+              CalculatorBrain(height: sliderHeight, weight: sliderWeight);
               Navigator.push(
                   context,
                   MaterialPageRoute(
                       builder: (context) => ResultScreen(
-                            bmiResult: calc.CalculateBMI().toString(),
-                            resultText: calc.getResult(),
-                            interpretation: calc.getInterpretation(),
-                          )));
+                        bmiResult: calc.CalculateBMI().toString(),
+                        resultText: calc.getResult().toString(),
+                        interpretation: calc.getInterpretation(),
+                      )));
             },
             child: Container(
               child: Center(
                   child: Text(
-                'Calculate',
-                style: kLargeButtonStyle,
-              )),
+                    'Calculate',
+                    style: kLargeButtonStyle,
+                  )),
               color: Color(0xFFEB1555),
               margin: EdgeInsets.only(top: 10.0),
               width: double.infinity,
@@ -228,7 +244,7 @@ class _InputPageState extends State<InputPage> {
 class RoundIcon extends StatelessWidget {
   RoundIcon({required this.iconData, required this.onPress});
   final IconData iconData;
-  final Function onPress;
+  final VoidCallback onPress;
 
   @override
   Widget build(BuildContext context) {
@@ -240,7 +256,8 @@ class RoundIcon extends StatelessWidget {
         width: 56.0,
       ),
       shape: CircleBorder(),
-      fillColor: Color(0xFF4C4F5E), onPressed: () {  },
+      fillColor: Color(0xFF4C4F5E),
+      onPressed: onPress,
     );
   }
 }
