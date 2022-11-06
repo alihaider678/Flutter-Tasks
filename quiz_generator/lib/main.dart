@@ -107,7 +107,7 @@ class _startState extends State<start> {
                       style: ButtonStyle(
                           elevation: MaterialStateProperty.all(8),
                           backgroundColor: MaterialStateProperty.all(Colors.green)),
-                      child: const Text('True')),
+                      child: const Text('Yes')),
                 ),
                 SizedBox(
                   height: 20,
@@ -132,7 +132,7 @@ class _startState extends State<start> {
                       style: ButtonStyle(
                           elevation: MaterialStateProperty.all(8),
                           backgroundColor: MaterialStateProperty.all(Colors.red)),
-                      child: const Text('False')),
+                      child: const Text('No')),
                 ),
                 SizedBox(
                   height: 10,
