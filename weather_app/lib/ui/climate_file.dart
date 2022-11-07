@@ -21,6 +21,18 @@ class _ClimateState extends State<Climate> {
           )
         ],
       ),
+      body: Stack(
+        children: [
+          Center(
+            child: Image(
+              image: AssetImage('images/umbrella.png'),
+              height: 1200.0,
+              width: 600.0,
+              fit: BoxFit.fill,
+            ),
+          )
+        ],
+      ),
     );
   }
 }
