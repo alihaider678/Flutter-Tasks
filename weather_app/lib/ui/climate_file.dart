@@ -17,12 +17,12 @@ class _ClimateState extends State<Climate> {
     print(data.toString());
   }
 
-  String ? _cityEntered;
+  String? _cityEntered;
   Future _goToNextScreen(BuildContext context) async {
     Map? results = await Navigator.of(context)
-        .push( MaterialPageRoute<Map>(builder: (BuildContext context) {
+        .push(MaterialPageRoute<Map>(builder: (BuildContext context) {
       //change to Map instead of dynamic for this to work
-      return  ChangeCity();
+      return ChangeCity();
     }));
 
     if (results != null && results.containsKey('enter')) {
@@ -61,7 +61,7 @@ class _ClimateState extends State<Climate> {
             alignment: Alignment.topRight,
             margin: EdgeInsets.fromLTRB(0.0, 10.9, 20.9, 0.0),
             child: Text(
-              'Vehari',
+              '${_cityEntered == null ? util.defaultCity : _cityEntered}',
               style: cityStyle(),
             ),
           ),
@@ -72,7 +72,7 @@ class _ClimateState extends State<Climate> {
           ),
           Container(
             margin: EdgeInsets.fromLTRB(30.0, 90.0, 0.0, 0.0),
-            child: updateTempWidget('Lahore'),
+            child: updateTempWidget('${_cityEntered == null ? util.defaultCity : _cityEntered}'),
           ),
         ],
       ),
