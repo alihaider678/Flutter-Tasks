@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import '../utils/api_file.dart' as util;
+import 'package:http/http.dart' as http;
+import 'dart:convert';
 
 class Climate extends StatefulWidget {
   const Climate({Key? key}) : super(key: key);
@@ -10,6 +12,10 @@ class Climate extends StatefulWidget {
 }
 
 class _ClimateState extends State<Climate> {
+  void showStuff() async {
+    Map data = await getWeather(util.apiId, util.defaultCity);
+    print(data.toString());
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,7 +24,7 @@ class _ClimateState extends State<Climate> {
         backgroundColor: Colors.red,
         actions: [
           IconButton(
-            onPressed: () => print("clicked"),
+            onPressed: () => showStuff(),
             icon: Icon(Icons.menu),
           )
         ],
@@ -51,6 +57,9 @@ class _ClimateState extends State<Climate> {
     String ? apiUrl =
         'http://api.openweathermap.org/data/2.5/weather?q=$city&appid='
         '${util.apiId}&units=imperial';
+    http.Response response = await http.get(apiUrl);
+
+    return json.decode(response.body);
   }
 }
 
