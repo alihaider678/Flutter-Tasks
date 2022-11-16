@@ -12,6 +12,8 @@ Section: A
 
 Batch: 18-BCS
 
+SEM: 8
+
 Task: Table_Generator_App
 
 Contact no: 0307-0614159
