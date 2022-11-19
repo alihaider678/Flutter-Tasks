@@ -128,7 +128,6 @@ class _ClimateState extends State<Climate> {
         });
   }
 }
-
 class ChangeCity extends StatelessWidget {
   var _cityFieldController = TextEditingController();
   @override
@@ -182,7 +181,6 @@ class ChangeCity extends StatelessWidget {
     );
   }
 }
-
 TextStyle cityStyle() {
   return TextStyle(
     color: Colors.white,
@@ -190,7 +188,6 @@ TextStyle cityStyle() {
     fontStyle: FontStyle.italic,
   );
 }
-
 TextStyle tempStyle() {
   return TextStyle(
       color: Colors.white,
@@ -198,7 +195,6 @@ TextStyle tempStyle() {
       fontWeight: FontWeight.w500,
       fontSize: 49.9);
 }
-
 TextStyle extraData() {
   return TextStyle(
       color: Colors.white70, fontStyle: FontStyle.normal, fontSize: 17.0);
