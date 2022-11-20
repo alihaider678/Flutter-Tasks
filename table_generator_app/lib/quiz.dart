@@ -45,7 +45,11 @@ class _QuizState extends State<Quiz> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        backgroundColor: Colors.blue.shade900,
+        title: Text('Table Quiz',
+          style: TextStyle(color: Colors.white),),
+      ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Column(
