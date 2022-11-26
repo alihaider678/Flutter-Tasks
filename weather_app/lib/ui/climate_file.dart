@@ -16,6 +16,11 @@ class _ClimateState extends State<Climate> {
     Map data = await getWeather(util.apiId, util.defaultCity);
     print(data.toString());
   }
+  @override
+  void initState() {
+    showStuff();
+    super.initState();
+  }
 
   String? _cityEntered;
   Future _goToNextScreen(BuildContext context) async {
@@ -26,12 +31,15 @@ class _ClimateState extends State<Climate> {
     }));
 
     if (results != null && results.containsKey('enter')) {
-      _cityEntered = results['enter'];
+      setState(() {
+        _cityEntered = results['enter'];
+      });
 
 //      debugPrint("From First screen" + results['enter'].toString());
 
     }
   }
+
 
   @override
   Widget build(BuildContext context) {
@@ -61,7 +69,7 @@ class _ClimateState extends State<Climate> {
             alignment: Alignment.topRight,
             margin: EdgeInsets.fromLTRB(0.0, 10.9, 20.9, 0.0),
             child: Text(
-              '${_cityEntered == null ? util.defaultCity : _cityEntered}',
+              _cityEntered == null ? util.defaultCity : _cityEntered ?? "",
               style: cityStyle(),
             ),
           ),
@@ -80,11 +88,10 @@ class _ClimateState extends State<Climate> {
   }
 
   Future<Map> getWeather(String apiId, String city) async {
-    var util;
     String? apiUrl =
         'http://api.openweathermap.org/data/2.5/weather?q=$city&appid='
         '${util.apiId}&units=imperial';
-    http.Response response = await http.get(apiUrl);
+    http.Response? response = await http.get(Uri.parse(apiUrl));
 
     return json.decode(response.body);
   }
@@ -160,19 +167,14 @@ class ChangeCity extends StatelessWidget {
                 ),
               ),
               ListTile(
-                title: TextButton(
+                title: MaterialButton(
                     onPressed: () {
                       Navigator.pop(
                           context, {'enter': _cityFieldController.text});
                     },
-                    //textColor: Colors.white70,
-                    //color: Colors.redAccent,
-                    child: Text(
-                      'Get Weather',
-                      style: TextStyle(
-                        color: Colors.white70,
-                      ),
-                    )),
+                    textColor: Colors.white70,
+                    color: Colors.redAccent,
+                    child: Text('Get Weather')),
               )
             ],
           )
