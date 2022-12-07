@@ -169,7 +169,7 @@ class _ToDoListScreenState extends State<ToDoListScreen> {
           'Clear everything?',
         ),
         content: Text(
-          'Are you sure you want to delete all the tasks?',
+          'Are you sure you want to delete all the results?',
         ),
         actions: [
           // * Cancel button
