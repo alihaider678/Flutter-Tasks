@@ -182,6 +182,7 @@ class _ToDoListScreenState extends State<ToDoListScreen> {
             },
             child: Text(
               'Cancel',
+              style: TextStyle(color: Colors.blue.shade900),
             ),
           ),
           // * Clean All
