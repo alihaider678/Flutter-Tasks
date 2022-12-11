@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.sqflite">
+    package="com.example.sql_task">
    <application
-        android:label="sqflite"
+        android:label="sql_task"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

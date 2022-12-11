@@ -1,4 +1,4 @@
-package com.example.sqflite
+package com.example.sql_task
 
 import io.flutter.embedding.android.FlutterActivity
 

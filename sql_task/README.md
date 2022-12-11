@@ -1,4 +1,4 @@
-# sqflite
+# sql_task
 
 A new Flutter project.
 
