@@ -15,7 +15,7 @@ class SplashScreen extends StatelessWidget {
         duration: 10000,
         imageSize: 200,
         imageSrc: "assets/bg1.png",
-        backgroundColor: Colors.teal.shade50,
+        backgroundColor: Colors.pink.shade50,
         text: "Party Willingness App",
         textType: TextType.ColorizeAnimationText,
         colors: [
