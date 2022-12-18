@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:party/home.dart';
+import 'package:party/tabbar.dart';
 import 'package:splash_screen_view/SplashScreenView.dart';
 
 class SplashScreen extends StatelessWidget {
@@ -9,9 +9,9 @@ class SplashScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.green,
       body: SplashScreenView(
-        navigateRoute: Home(),
+        navigateRoute: TabBarScreen(),
         duration: 10000,
         imageSize: 200,
         imageSrc: "assets/bg1.png",
@@ -22,7 +22,7 @@ class SplashScreen extends StatelessWidget {
           Colors.purple,
           Colors.blue,
           Colors.yellow,
-          Colors.red,
+          Colors.red
         ],
         textStyle: TextStyle(
           fontSize: 24.0,

@@ -15,11 +15,6 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      appBar: AppBar(
-        title: Text('Home'),
-        centerTitle: true,
-        backgroundColor: Colors.green,
-      ),
       body: Center(
         child: FutureBuilder<List<Map<String, dynamic>>>(
           future: dbHelper.mydb().then((db) => dbHelper.queryAllRows()),
@@ -35,7 +30,7 @@ class _HomeState extends State<Home> {
                     child: Container(
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(20),
-                          color: Colors.black),
+                          color: Colors.pink.shade100),
                       child: ExpansionTile(
                         trailing: Icon(
                           Icons.arrow_drop_down,
@@ -44,7 +39,7 @@ class _HomeState extends State<Home> {
                         backgroundColor: Colors.black54,
                         title: Text(
                           list['reg'],
-                          style: TextStyle(color: Colors.white),
+                          style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
                         ),
                         children: <Widget>[
                           Padding(
@@ -136,7 +131,7 @@ class _HomeState extends State<Home> {
                                               TextButton(
                                                 onPressed: () async {
                                                   final rowsDeleted =
-                                                      await dbHelper.delete(id);
+                                                  await dbHelper.delete(id);
                                                   setState(() {
                                                     Home();
                                                   });
@@ -171,18 +166,18 @@ class _HomeState extends State<Home> {
                                 IconButton(
                                   onPressed: () async {
                                     TextEditingController regno =
-                                        TextEditingController(
-                                            text: list['reg']);
+                                    TextEditingController(
+                                        text: list['reg']);
                                     TextEditingController name =
-                                        TextEditingController(
-                                            text: list['name']);
+                                    TextEditingController(
+                                        text: list['name']);
 
                                     TextEditingController email =
-                                        TextEditingController(
-                                            text: list['email']);
+                                    TextEditingController(
+                                        text: list['email']);
                                     TextEditingController phone =
-                                        TextEditingController(
-                                            text: list['phone']);
+                                    TextEditingController(
+                                        text: list['phone']);
                                     await showDialog(
                                       context: context,
                                       builder: (BuildContext context) {
@@ -211,7 +206,7 @@ class _HomeState extends State<Home> {
                                                 controller: phone,
                                                 decoration: InputDecoration(
                                                     prefixText:
-                                                        "Phone Number : "),
+                                                    "Phone Number : "),
                                               ),
                                             ],
                                           ),
@@ -224,23 +219,23 @@ class _HomeState extends State<Home> {
                                                     phone.text.isNotEmpty) {
                                                   Map<String, dynamic> row = {
                                                     DatabaseHelper.columnId:
-                                                        list['_id'],
+                                                    list['_id'],
                                                     DatabaseHelper.columnName:
-                                                        name.text,
+                                                    name.text,
                                                     DatabaseHelper.columnReg:
-                                                        regno.text,
+                                                    regno.text,
                                                     DatabaseHelper.columnEmail:
-                                                        email.text,
+                                                    email.text,
                                                     DatabaseHelper.columnGender:
-                                                        list['gender'],
+                                                    list['gender'],
                                                     DatabaseHelper.columnPhone:
-                                                        phone.text,
+                                                    phone.text,
                                                     DatabaseHelper.columnStatus:
-                                                        list['status'],
+                                                    list['status'],
                                                   };
                                                   final rowsAffected =
-                                                      await dbHelper
-                                                          .update(row);
+                                                  await dbHelper
+                                                      .update(row);
                                                   setState(() {
                                                     Home();
                                                   });
@@ -276,28 +271,28 @@ class _HomeState extends State<Home> {
                                 InkWell(
                                   onTap: list['status'] == 1
                                       ? () async {
-                                          Map<String, dynamic> row = {
-                                            DatabaseHelper.columnId:
-                                                list['_id'],
-                                            DatabaseHelper.columnName:
-                                                list['name'],
-                                            DatabaseHelper.columnReg:
-                                                list['reg'],
-                                            DatabaseHelper.columnEmail:
-                                                list['email'],
-                                            DatabaseHelper.columnGender:
-                                                list['gender'],
-                                            DatabaseHelper.columnPhone:
-                                                list['phone'],
-                                            DatabaseHelper.columnStatus: 0,
-                                          };
-                                          final rowsAffected =
-                                              await dbHelper.update(row);
-                                          print(rowsAffected);
-                                          setState(() {
-                                            Home();
-                                          });
-                                        }
+                                    Map<String, dynamic> row = {
+                                      DatabaseHelper.columnId:
+                                      list['_id'],
+                                      DatabaseHelper.columnName:
+                                      list['name'],
+                                      DatabaseHelper.columnReg:
+                                      list['reg'],
+                                      DatabaseHelper.columnEmail:
+                                      list['email'],
+                                      DatabaseHelper.columnGender:
+                                      list['gender'],
+                                      DatabaseHelper.columnPhone:
+                                      list['phone'],
+                                      DatabaseHelper.columnStatus: 0,
+                                    };
+                                    final rowsAffected =
+                                    await dbHelper.update(row);
+                                    print(rowsAffected);
+                                    setState(() {
+                                      Home();
+                                    });
+                                  }
                                       : () {},
                                   child: Container(
                                     height: 60,
@@ -307,7 +302,7 @@ class _HomeState extends State<Home> {
                                             ? Colors.red
                                             : Colors.green,
                                         borderRadius:
-                                            BorderRadius.circular(10)),
+                                        BorderRadius.circular(10)),
                                     child: Center(
                                       child: Text(
                                         list['status'] == 1 ? "Unpaid" : "Paid",
@@ -323,7 +318,6 @@ class _HomeState extends State<Home> {
                       ),
                     ),
                   );
-
                   return Padding(
                     padding: const EdgeInsets.all(10.0),
                     child: Container(
@@ -444,7 +438,7 @@ class _HomeState extends State<Home> {
                                               TextButton(
                                                 onPressed: () async {
                                                   final rowsDeleted =
-                                                      await dbHelper.delete(id);
+                                                  await dbHelper.delete(id);
                                                   setState(() {
                                                     Home();
                                                   });
@@ -479,18 +473,18 @@ class _HomeState extends State<Home> {
                                 IconButton(
                                   onPressed: () async {
                                     TextEditingController regno =
-                                        TextEditingController(
-                                            text: list['reg']);
+                                    TextEditingController(
+                                        text: list['reg']);
                                     TextEditingController name =
-                                        TextEditingController(
-                                            text: list['name']);
+                                    TextEditingController(
+                                        text: list['name']);
 
                                     TextEditingController email =
-                                        TextEditingController(
-                                            text: list['email']);
+                                    TextEditingController(
+                                        text: list['email']);
                                     TextEditingController phone =
-                                        TextEditingController(
-                                            text: list['phone']);
+                                    TextEditingController(
+                                        text: list['phone']);
                                     await showDialog(
                                       context: context,
                                       builder: (BuildContext context) {
@@ -519,7 +513,7 @@ class _HomeState extends State<Home> {
                                                 controller: phone,
                                                 decoration: InputDecoration(
                                                     prefixText:
-                                                        "Phone Number : "),
+                                                    "Phone Number : "),
                                               ),
                                             ],
                                           ),
@@ -532,23 +526,23 @@ class _HomeState extends State<Home> {
                                                     phone.text.isNotEmpty) {
                                                   Map<String, dynamic> row = {
                                                     DatabaseHelper.columnId:
-                                                        list['_id'],
+                                                    list['_id'],
                                                     DatabaseHelper.columnName:
-                                                        name.text,
+                                                    name.text,
                                                     DatabaseHelper.columnReg:
-                                                        regno.text,
+                                                    regno.text,
                                                     DatabaseHelper.columnEmail:
-                                                        email.text,
+                                                    email.text,
                                                     DatabaseHelper.columnGender:
-                                                        list['gender'],
+                                                    list['gender'],
                                                     DatabaseHelper.columnPhone:
-                                                        phone.text,
+                                                    phone.text,
                                                     DatabaseHelper.columnStatus:
-                                                        list['status'],
+                                                    list['status'],
                                                   };
                                                   final rowsAffected =
-                                                      await dbHelper
-                                                          .update(row);
+                                                  await dbHelper
+                                                      .update(row);
                                                   setState(() {
                                                     Home();
                                                   });
@@ -584,28 +578,28 @@ class _HomeState extends State<Home> {
                                 InkWell(
                                   onTap: list['status'] == 1
                                       ? () async {
-                                          Map<String, dynamic> row = {
-                                            DatabaseHelper.columnId:
-                                                list['_id'],
-                                            DatabaseHelper.columnName:
-                                                list['name'],
-                                            DatabaseHelper.columnReg:
-                                                list['reg'],
-                                            DatabaseHelper.columnEmail:
-                                                list['email'],
-                                            DatabaseHelper.columnGender:
-                                                list['gender'],
-                                            DatabaseHelper.columnPhone:
-                                                list['phone'],
-                                            DatabaseHelper.columnStatus: 0,
-                                          };
-                                          final rowsAffected =
-                                              await dbHelper.update(row);
-                                          print(rowsAffected);
-                                          setState(() {
-                                            Home();
-                                          });
-                                        }
+                                    Map<String, dynamic> row = {
+                                      DatabaseHelper.columnId:
+                                      list['_id'],
+                                      DatabaseHelper.columnName:
+                                      list['name'],
+                                      DatabaseHelper.columnReg:
+                                      list['reg'],
+                                      DatabaseHelper.columnEmail:
+                                      list['email'],
+                                      DatabaseHelper.columnGender:
+                                      list['gender'],
+                                      DatabaseHelper.columnPhone:
+                                      list['phone'],
+                                      DatabaseHelper.columnStatus: 0,
+                                    };
+                                    final rowsAffected =
+                                    await dbHelper.update(row);
+                                    print(rowsAffected);
+                                    setState(() {
+                                      Home();
+                                    });
+                                  }
                                       : () {},
                                   child: Container(
                                     height: 60,
@@ -615,7 +609,7 @@ class _HomeState extends State<Home> {
                                             ? Colors.red
                                             : Colors.green,
                                         borderRadius:
-                                            BorderRadius.circular(10)),
+                                        BorderRadius.circular(10)),
                                     child: Center(
                                       child: Text(
                                         list['status'] == 1 ? "Unpaid" : "Paid",
@@ -650,7 +644,7 @@ class _HomeState extends State<Home> {
           height: 70,
           width: 70,
           decoration: BoxDecoration(
-              color: Colors.green, borderRadius: BorderRadius.circular(100)),
+              color: Colors.grey.shade800, borderRadius: BorderRadius.circular(100)),
           child: Center(
             child: Text(
               "+",

@@ -54,6 +54,30 @@ class DatabaseHelper {
     return Sqflite.firstIntValue(results) ?? 0;
   }
 
+  Future<int> queryRowMale() async {
+    final results = await _db
+        .rawQuery('SELECT COUNT(*) FROM $table WHERE $columnGender = "Male"');
+    return Sqflite.firstIntValue(results) ?? 0;
+  }
+
+  Future<int> queryRowFemale() async {
+    final results = await _db
+        .rawQuery('SELECT COUNT(*) FROM $table WHERE $columnGender = "Female"');
+    return Sqflite.firstIntValue(results) ?? 0;
+  }
+
+  Future<int> queryRowPaid() async {
+    final results = await _db
+        .rawQuery('SELECT COUNT(*) FROM $table WHERE $columnStatus = "0"');
+    return Sqflite.firstIntValue(results) ?? 0;
+  }
+
+  Future<int> queryRowUnPaid() async {
+    final results = await _db
+        .rawQuery('SELECT COUNT(*) FROM $table WHERE $columnStatus = "1"');
+    return Sqflite.firstIntValue(results) ?? 0;
+  }
+
   // We are assuming here that the id column in the map is set. The other
   // column values will be used to update the row.
   Future<int> update(Map<String, dynamic> row) async {

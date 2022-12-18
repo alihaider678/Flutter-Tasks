@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:party/splash.dart';
 
 import 'database.dart';
-import 'home.dart';
 
 final dbHelper = DatabaseHelper();
 Future<void> main() async {
@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      home: Home(),
+      home: SplashScreen(),
     );
   }
 }
