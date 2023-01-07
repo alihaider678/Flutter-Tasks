@@ -54,8 +54,9 @@ class _HomeState extends State<Home> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
+        backgroundColor: Colors.pink.shade100,
         title: !searchState
-            ? Text("Total members")
+            ? Text("Search Students")
             : TextField(
           controller: searchcontroller,
           cursorColor: Colors.white,

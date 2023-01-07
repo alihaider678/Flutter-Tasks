@@ -12,7 +12,7 @@ class MoreScreen extends StatefulWidget {
 
 class _MoreScreenState extends State<MoreScreen> {
   @override
-  int fees = 2000;
+  int fees = 1500;
   int a = 0;
   int b = 0;
   int c = 0;
@@ -78,7 +78,7 @@ class _MoreScreenState extends State<MoreScreen> {
       });
     });
     setState(() {
-      fees = _numberList.last.number ?? 2000;
+      fees = _numberList.last.number ?? 1500;
     });
   }
 
@@ -102,7 +102,7 @@ class _MoreScreenState extends State<MoreScreen> {
                     height: 130,
                     width: double.infinity,
                     decoration: BoxDecoration(
-                        color: Colors.teal,
+                        color: Colors.grey.shade800,
                         borderRadius: BorderRadius.circular(30)),
                     child: Column(
                       children: [
@@ -114,7 +114,7 @@ class _MoreScreenState extends State<MoreScreen> {
                               Text(
                                 "Paid fees",
                                 style: TextStyle(
-                                    color: Colors.black,
+                                    color: Colors.white,
                                     fontWeight: FontWeight.bold,
                                     fontFamily: "DIN Alternate",
                                     fontSize: 20),
@@ -125,7 +125,7 @@ class _MoreScreenState extends State<MoreScreen> {
                                   Text(
                                     fees.toString(),
                                     style: TextStyle(
-                                        color: Colors.black,
+                                        color: Colors.white,
                                         fontWeight: FontWeight.normal,
                                         fontFamily: "Cochin",
                                         fontSize: 16),
@@ -236,7 +236,7 @@ class _MoreScreenState extends State<MoreScreen> {
                               Text(
                                 "Total Collection",
                                 style: TextStyle(
-                                    color: Colors.black,
+                                    color: Colors.white,
                                     fontWeight: FontWeight.bold,
                                     fontFamily: "DIN Alternate",
                                     fontSize: 20),
@@ -245,7 +245,7 @@ class _MoreScreenState extends State<MoreScreen> {
                               Text(
                                 "Rs.$result",
                                 style: TextStyle(
-                                    color: Colors.black,
+                                    color: Colors.white,
                                     fontWeight: FontWeight.normal,
                                     fontFamily: "Cochin",
                                     fontSize: 16),
