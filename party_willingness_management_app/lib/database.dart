@@ -2,10 +2,13 @@ import 'package:path/path.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:sqflite/sqflite.dart';
 
+import 'generated/number_model.dart';
+
 class DatabaseHelper {
   static const _databaseName = "MyDatabase.db";
   static const _databaseVersion = 1;
   static const table = 'my_table';
+  static const table2 = 'numbers';
   static const columnId = '_id';
   static const columnName = 'name';
   static const columnReg = 'reg';
@@ -28,6 +31,9 @@ class DatabaseHelper {
 
   // SQL code to create the database table
   Future _onCreate(Database db, int version) async {
+    String sql2 = "CREATE TABLE numbers(id INTEGER PRIMARY KEY,num INTEGER)";
+
+    await db.execute(sql2);
     await db.execute('''
           CREATE TABLE $table (
             $columnId INTEGER PRIMARY KEY,
@@ -41,8 +47,16 @@ class DatabaseHelper {
           ''');
   }
 
+  SaveNumber(modelnumber user) async {
+    return await _db.insert('numbers', user.passwordMap());
+  }
+
   Future<int> insert(Map<String, dynamic> row) async {
     return await _db.insert(table, row);
+  }
+
+  Future<List<Map<String, dynamic>>> queryAllnumber() async {
+    return await _db.query('numbers');
   }
 
   Future<List<Map<String, dynamic>>> queryAllRows() async {
