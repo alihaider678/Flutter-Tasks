@@ -33,7 +33,7 @@ class _DonnerListState extends State<DonnerList> {
         appBar: AppBar(
           backgroundColor: MyColors.primaryColor,
           title: !searchState
-              ? Text("Search Students")
+              ? Text("Search Donor")
               : TextField(
             controller: searchcontroller,
             cursorColor: Colors.white,
